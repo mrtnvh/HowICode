@@ -1,0 +1,18 @@
+{
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-banner": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-criticalcss": "*",
+    "grunt-imageoptim": "*",
+    "grunt-modernizr": "*",
+    "grunt-sass": "*",
+    "grunt-uncss": "*",
+    "load-grunt-tasks": "*",
+    "time-grunt": "*"
+  }
