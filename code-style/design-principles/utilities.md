@@ -1,4 +1,4 @@
-# CSS utilities
+# Utilities
 
 Utility classes map to fixed, low-level, structural and positional traits.
 These classes can be used in a component's HTML. Because utilities are so
