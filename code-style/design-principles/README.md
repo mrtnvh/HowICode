@@ -13,20 +13,21 @@ A component-based system allows for the implementation and composition of loosel
 
 <a name="modularity"></a>
 ## Modularity
+Each component should have a single focus and contain everything necessary to realise a specific part of the UI. Components may contain HTML, CSS, JavaScript, and associated assets without making assumptions about the outer rendering context.
 
-At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns.
-
-There are five types of categories:
+_But what about certain base styles?_
+Here is where I throw in some SMACSS. SMACSS divides it's CSS in 5 categories.
 
 1. Base
 2. Layout
-3. Module (SMACSS) or Components (SUIT CSS)
+3. Modules
 4. State
 5. Theme
 
-Each category has certain guidelines that apply to it. This somewhat succinct separation allows us to ask ourselves questions during the development process. How are we going to code things and why are we going to code them that way?
+I for the most part I tend to use only 2 parts of these.
 
-Much of the purpose of categorizing things is to codify patterns—things that repeat themselves within our design. Repetition results in less code, easier maintenance, and greater consistency in the user experience. These are all wins. Exceptions to the rule can be advantageous but they should be justified.
+1. Base
+2. Modules, which I rename to Components
 
 
 <a name="cohesion"></a>
