@@ -1,6 +1,7 @@
 # Code style
 
 1. [Design principles](design-principles)
+  * [Base styles](design-principles/base-styles.md)
   * [Components](design-principles/components.md)
   * [Utilities](design-principles/utilities.md)
 2. [Naming conventions](naming-conventions.md)
@@ -9,24 +10,21 @@
   * [ComponentName--modifierName](naming-conventions.md#ComponentName--modifierName)
   * [ComponentName-descendentName](naming-conventions.md#ComponentName-descendentName)
   * [ComponentName.is-stateOfComponent](naming-conventions.md#is-stateOfComponent)
-3. [HTML](html)
+3. [General rules](general-rules)
+  * [Whitespace](general-rules#whitespace)
+4. [HTML](html)
   * [Format](html#html-format)
   * [Attribute order](html#html-attrs)
   * [Naming](html#html-naming)
   * [Practical example](html#html-example)
-4. [CSS](css)
+5. [CSS](css)
   * [Comments](#css-comments)
   * [Format](#css-format)
   * [Practical example](#css-example)
-5. Javascript
+6. Javascript
 
 
-<a name="whitespace"></a>
-## 2. Whitespace
 
-* Use whitespace to improve readability.
-* Use tabs with a size of 4 spaces for indentation.
-* Strip all end-of-line and end-of-file whitespace.
 
 
 
