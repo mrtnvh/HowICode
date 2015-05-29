@@ -15,10 +15,10 @@ can help to reduce repetition and provide consistent implementations.
 
 ```html
 <div class="u-cf">
-  <p class="u-textTruncate">{{text}}</p>
-  <img class="u-floatLeft" src="{{src}}" alt="">
-  <img class="u-floatLeft" src="{{src}}" alt="">
-  <img class="u-floatLeft" src="{{src}}" alt="">
+	<p class="u-textTruncate">{{text}}</p>
+	<img class="u-floatLeft" src="{{src}}" alt="">
+	<img class="u-floatLeft" src="{{src}}" alt="">
+	<img class="u-floatLeft" src="{{src}}" alt="">
 </div>
 ```
 
@@ -35,12 +35,12 @@ and utilities can be used alongside component classes.
 
 ```html
 <div class="Tweet u-cf">
-  <a class="u-sizeFit" href="{{url}}">
-    <img class="u-block" src="{{src}}" alt="">
-  </a>
-  <p class="Tweet-text u-sizeFill u-textBreak">
-    …
-  </p>
+	<a class="u-sizeFit" href="{{url}}">
+		<img class="u-block" src="{{src}}" alt="">
+	</a>
+	<p class="Tweet-text u-sizeFill u-textBreak">
+		…
+	</p>
 </div>
 ```
 
