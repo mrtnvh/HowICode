@@ -13,21 +13,45 @@ A component-based system allows for the implementation and composition of loosel
 
 <a name="modularity"></a>
 ## Modularity
+CSS is divided in 3 categories to keep a clear overview.
+
+1. Base styles
+2. Components
+3. Utilities
+
+### 1. Base styles
+Base rules are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
+
+```scss
+html,
+body,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+input[type=text] {
+  border: 1px solid #999;
+}
+
+a {
+  color: #039;
+  
+  &:hover {
+    color: #03C;
+  }
+}
+```
+
+### 2. Components
 Each component should have a single focus and contain everything necessary to realise a specific part of the UI. Components may contain HTML, CSS, JavaScript, and associated assets without making assumptions about the outer rendering context.
 
-_But what about certain base styles?_
-Here is where I throw in some SMACSS. SMACSS divides it's CSS in 5 categories.
+[More on components](components.md)
 
-1. Base
-2. Layout
-3. Modules
-4. State
-5. Theme
+### 3. Utilities
+Utility classes map to fixed, low-level, structural and positional traits. These classes can be used in a component's HTML. Because utilities are so focused, they will generally use !important to ensure their styles are always applied.
 
-I for the most part I tend to use only 2 parts of these.
-
-1. Base
-2. Modules, which I rename to Components
+[More on Utilities](utilities.md)
 
 
 <a name="cohesion"></a>
