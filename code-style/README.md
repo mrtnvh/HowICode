@@ -16,7 +16,6 @@
 	* [Naming](html#html-naming)
 	* [Practical example](html#html-example)
 5. [CSS](css)
-	* [General principles](css#general-principles)
 	* [Whitespace](css#whitespace)
 	* [Comments](css#comments)
 	* [Format](css#format)
