@@ -14,7 +14,8 @@
 
 ## 2. Speed
 Build for [web performance](https://github.com/davidsonfellipe/awesome-wpo#articles).
-Keep everything well documented, modular in your development environment and use a build system to build a lean, trimmed production.
+
+Projects should always attempt to include some generic means by which source can be linted, tested and compressed in preparation for production use. For this task, [grunt](https://github.com/gruntjs/grunt) by Ben Alman is second to none.
 
 Do what you want in development, but be sure remove all excess baggage for production.
 

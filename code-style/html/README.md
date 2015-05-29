@@ -1,5 +1,12 @@
 # HTML
 
+## Table of contents
+1. [Format](html-format)
+2. [Attribute order](html-attrs)
+3. [Naming](html-naming)
+4. [Practical example](html-example)
+
+
 <a name="html-format"></a>
 ## 1. Format
 
