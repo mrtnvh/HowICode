@@ -13,7 +13,7 @@ A component-based system allows for the implementation and composition of loosel
 
 <a name="modularity"></a>
 ## Modularity
-CSS is divided in 3 categories to keep a clear overview.
+Styles are divided in 3 categories to maintain a clarity.
 
 1. [Base styles](base-styles.md)
 2. [Components](components.md)
@@ -33,6 +33,25 @@ Each component should have a single focus and contain everything necessary to re
 Utility classes map to fixed, low-level, structural and positional traits. These classes can be used in a component's HTML. Because utilities are so focused, they will generally use !important to ensure their styles are always applied.
 
 [More on Utilities](utilities.md)
+
+Directory structure example:
+```
+scss/
+├── main.scss
+├── _variables.scss
+├── mixins/
+│	├── _Clearfix.scss
+│	└── ...
+├── base/
+│	├── _Reset.scss
+│	└── ...
+├── components/
+│   ├── _Alerts.scss
+│	└── ...
+└── utilities/
+	├── _utilities.scss
+	└── ...
+```
 
 
 
