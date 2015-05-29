@@ -1,6 +1,6 @@
 # Design principles
 
-My design principles are largely (read almost completely) based on [SUIT CSS](https://github.com/suitcss/suit/tree/master/doc), a methodology focused on improving the CSS authoring experience for component-based development.
+My design principles are largely (read almost completely) based on [SUIT CSS](https://github.com/suitcss/suit/tree/master/doc) and [SMACSS](https://smacss.com/). Both methodologyies focused on improving the CSS authoring experience for component-based development.
 
 A component-based system allows for the implementation and composition of loosely coupled, independent units into well-defined composite objects. Components are encapsulated but are able to interoperate via interfaces/events.
 
@@ -14,10 +14,17 @@ A component-based system allows for the implementation and composition of loosel
 <a name="modularity"></a>
 ## Modularity
 
-Each component should have a single focus and contain everything necessary to
-realise a specific part of the UI. Components may contain HTML,
-CSS, JavaScript, and associated assets without making assumptions about the
-outer rendering context.
+At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns.
+
+There are five types of categories:
+
+1. Base
+2. Layout
+3. Module (SMACSS) or Components (SUIT CSS)
+4. State
+5. Theme
+
+
 
 <a name="cohesion"></a>
 ## Cohesion
