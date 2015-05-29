@@ -32,3 +32,4 @@ Most of my code is inspired by the following principles:
 * [SMACCS](https://smacss.com/)
 * [Idiomatic JS](https://github.com/rwaldron/idiomatic.js/)
 * [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
+* [Idiomatic HTML](https://github.com/necolas/idiomatic-html)

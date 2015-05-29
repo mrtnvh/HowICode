@@ -3,7 +3,6 @@
 > ### "Arguments over style are pointless. There should be a style guide, and you should follow it"
 >_Rebecca_ _Murphey_
 
-This is a living document and new ideas for improving the code around us are always welcome. Contribute: fork, clone, branch, commit, push, pull request.
 
 ## Table of Contents
 * [Preface](#preface)
@@ -31,737 +30,738 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 * Do not impose a project style preferences on other people's code or projects; if an existing common style exists, it should be respected.
 
 ## <a name="whitespace">Whitespace</a>
-	- Never mix spaces and tabs.
-	- When beginning a project, before you write any code, choose between soft indents (spaces) or real tabs, consider this **law**.
-			- For readability, I always recommend setting your editor's indent size to two characters &mdash; this means two spaces or two spaces representing a real tab.
-	- If your editor supports it, always work with the "show invisibles" setting turned on. The benefits of this practice are:
-			- Enforced consistency
-			- Eliminating end of line whitespace
-			- Eliminating blank line whitespace
-			- Commits and diffs that are easier to read
-	- Use [Editorconfig](http://editorconfig.org/) when possible.  It supports most IDEs and handles most whitespace settings.
+
+* Never mix spaces and tabs.
+* When beginning a project, before you write any code, choose between soft indents (spaces) or real tabs, consider this **law**.
+* For readability, I always recommend setting your editor's indent size to two characters &mdash; this means two spaces or two spaces representing a real tab.
+* If your editor supports it, always work with the "show invisibles" setting turned on. The benefits of this practice are:
+* Enforced consistency
+* Eliminating end of line whitespace
+* Eliminating blank line whitespace
+* Commits and diffs that are easier to read
+* Use [Editorconfig](http://editorconfig.org/) when possible.  It supports most IDEs and handles most whitespace settings.
 
 
 ## <a name="spacing">Beautiful Syntax</a>
 
-		A. Parens, Braces, Linebreaks
+A. Parens, Braces, Linebreaks
 
-		```javascript
+```javascript
 
-		// if/else/for/while/try always have spaces, braces and span multiple lines
-		// this encourages readability
+// if/else/for/while/try always have spaces, braces and span multiple lines
+// this encourages readability
 
-		// 2.A.1.1
-		// Examples of really cramped syntax
+// 2.A.1.1
+// Examples of really cramped syntax
 
-		if(condition) doSomething();
+if(condition) doSomething();
 
-		while(condition) iterating++;
+while(condition) iterating++;
 
-		for(var i=0;i<100;i++) someIterativeFn();
+for(var i=0;i<100;i++) someIterativeFn();
 
 
-		// 2.A.1.1
-		// Use whitespace to promote readability
+// 2.A.1.1
+// Use whitespace to promote readability
 
-		if ( condition ) {
-			// statements
-		}
+if ( condition ) {
+	// statements
+}
 
-		while ( condition ) {
-			// statements
-		}
+while ( condition ) {
+	// statements
+}
 
-		for ( var i = 0; i < 100; i++ ) {
-			// statements
-		}
+for ( var i = 0; i < 100; i++ ) {
+	// statements
+}
 
-		// Even better:
+// Even better:
 
-		var i,
-			length = 100;
+var i,
+	length = 100;
 
-		for ( i = 0; i < length; i++ ) {
-			// statements
-		}
+for ( i = 0; i < length; i++ ) {
+	// statements
+}
 
-		// Or...
+// Or...
 
-		var i = 0,
-			length = 100;
+var i = 0,
+	length = 100;
 
-		for ( ; i < length; i++ ) {
-			// statements
-		}
+for ( ; i < length; i++ ) {
+	// statements
+}
 
-		var prop;
+var prop;
 
-		for ( prop in object ) {
-			// statements
-		}
+for ( prop in object ) {
+	// statements
+}
 
 
-		if ( true ) {
-			// statements
-		} else {
-			// statements
-		}
-		```
+if ( true ) {
+	// statements
+} else {
+	// statements
+}
+```
 
 
-		B. Assignments, Declarations, Functions ( Named, Expression, Constructor )
+B. Assignments, Declarations, Functions ( Named, Expression, Constructor )
 
-		```javascript
+```javascript
 
-		// 2.B.1.1
-		// Variables
-		var foo = "bar",
-			num = 1,
-			undef;
+// 2.B.1.1
+// Variables
+var foo = "bar",
+	num = 1,
+	undef;
 
-		// Literal notations:
-		var array = [],
-			object = {};
+// Literal notations:
+var array = [],
+	object = {};
 
 
-		// 2.B.1.2
-		// Using only one `var` per scope (function) promotes readability
-		// and keeps your declaration list free of clutter (also saves a few keystrokes)
+// 2.B.1.2
+// Using only one `var` per scope (function) promotes readability
+// and keeps your declaration list free of clutter (also saves a few keystrokes)
 
-		// Bad
-		var foo = "";
-		var bar = "";
-		var qux;
+// Bad
+var foo = "";
+var bar = "";
+var qux;
 
-		// Good
-		var foo = "",
-			bar = "",
-			qux;
+// Good
+var foo = "",
+	bar = "",
+	qux;
 
-		// or..
-		var // Comment on these
-		foo = "",
-		bar = "",
-		quux;
+// or..
+var // Comment on these
+foo = "",
+bar = "",
+quux;
 
-		// 2.B.1.3
-		// var statements should always be in the beginning of their respective scope (function).
-
+// 2.B.1.3
+// var statements should always be in the beginning of their respective scope (function).
+
 
-		// Bad
-		function foo() {
+// Bad
+function foo() {
 
-			// some statements here
+	// some statements here
 
-			var bar = "",
-				qux;
-		}
+	var bar = "",
+qux;
+}
 
-		// Good
-		function foo() {
-			var bar = "",
-				qux;
+// Good
+function foo() {
+	var bar = "",
+qux;
 
-			// all statements after the variables declarations.
-		}
+	// all statements after the variables declarations.
+}
 
-		// 2.B.1.4
-		// const and let, from ECMAScript 6, should likewise be at the top of their scope (block).
+// 2.B.1.4
+// const and let, from ECMAScript 6, should likewise be at the top of their scope (block).
 
-		// Bad
-		function foo() {
-			let foo,
-				bar;
-			if ( condition ) {
-				bar = "";
-				// statements
-			}
-		}
-		// Good
-		function foo() {
-			let foo;
-			if ( condition ) {
-				let bar = "";
-				// statements
-			}
-		}
-		```
+// Bad
+function foo() {
+	let foo,
+bar;
+	if ( condition ) {
+bar = "";
+// statements
+	}
+}
+// Good
+function foo() {
+	let foo;
+	if ( condition ) {
+let bar = "";
+// statements
+	}
+}
+```
 
-		```javascript
+```javascript
 
-		// 2.B.2.1
-		// Named Function Declaration
-		function foo( arg1, argN ) {
+// 2.B.2.1
+// Named Function Declaration
+function foo( arg1, argN ) {
 
-		}
+}
 
-		// Usage
-		foo( arg1, argN );
+// Usage
+foo( arg1, argN );
 
 
-		// 2.B.2.2
-		// Named Function Declaration
-		function square( number ) {
-			return number * number;
-		}
+// 2.B.2.2
+// Named Function Declaration
+function square( number ) {
+	return number * number;
+}
 
-		// Usage
-		square( 10 );
+// Usage
+square( 10 );
 
-		// Really contrived continuation passing style
-		function square( number, callback ) {
-			callback( number * number );
-		}
+// Really contrived continuation passing style
+function square( number, callback ) {
+	callback( number * number );
+}
 
-		square( 10, function( square ) {
-			// callback statements
-		});
+square( 10, function( square ) {
+	// callback statements
+});
 
 
-		// 2.B.2.3
-		// Function Expression
-		var square = function( number ) {
-			// Return something valuable and relevant
-			return number * number;
-		};
+// 2.B.2.3
+// Function Expression
+var square = function( number ) {
+	// Return something valuable and relevant
+	return number * number;
+};
 
-		// Function Expression with Identifier
-		// This preferred form has the added value of being
-		// able to call itself and have an identity in stack traces:
-		var factorial = function factorial( number ) {
-			if ( number < 2 ) {
-				return 1;
-			}
+// Function Expression with Identifier
+// This preferred form has the added value of being
+// able to call itself and have an identity in stack traces:
+var factorial = function factorial( number ) {
+	if ( number < 2 ) {
+return 1;
+	}
 
-			return number * factorial( number - 1 );
-		};
+	return number * factorial( number - 1 );
+};
 
 
-		// 2.B.2.4
-		// Constructor Declaration
-		function FooBar( options ) {
+// 2.B.2.4
+// Constructor Declaration
+function FooBar( options ) {
 
-			this.options = options;
-		}
+	this.options = options;
+}
 
-		// Usage
-		var fooBar = new FooBar({ a: "alpha" });
+// Usage
+var fooBar = new FooBar({ a: "alpha" });
 
-		fooBar.options;
-		// { a: "alpha" }
+fooBar.options;
+// { a: "alpha" }
 
-		```
+```
 
 
-		C. Exceptions, Slight Deviations
+C. Exceptions, Slight Deviations
 
-		```javascript
+```javascript
 
-		// 2.C.1.1
-		// Functions with callbacks
-		foo(function() {
-			// Note there is no extra space between the first paren
-			// of the executing function call and the word "function"
-		});
+// 2.C.1.1
+// Functions with callbacks
+foo(function() {
+	// Note there is no extra space between the first paren
+	// of the executing function call and the word "function"
+});
 
-		// Function accepting an array, no space
-		foo([ "alpha", "beta" ]);
+// Function accepting an array, no space
+foo([ "alpha", "beta" ]);
 
-		// 2.C.1.2
-		// Function accepting an object, no space
-		foo({
-			a: "alpha",
-			b: "beta"
-		});
+// 2.C.1.2
+// Function accepting an object, no space
+foo({
+	a: "alpha",
+	b: "beta"
+});
 
-		// Single argument string literal, no space
-		foo("bar");
+// Single argument string literal, no space
+foo("bar");
 
-		// Inner grouping parens, no space
-		if ( !("foo" in obj) ) {
+// Inner grouping parens, no space
+if ( !("foo" in obj) ) {
 
-		}
+}
 
-		```
+```
 
-		D. Consistency Always Wins
+D. Consistency Always Wins
 
-		In sections 2.A-2.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency.
-		It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
+In sections 2.A-2.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency.
+It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
 
-		```javascript
+```javascript
 
-		// 2.D.1.1
+// 2.D.1.1
 
-		if (condition) {
-			// statements
-		}
+if (condition) {
+	// statements
+}
 
-		while (condition) {
-			// statements
-		}
+while (condition) {
+	// statements
+}
 
-		for (var i = 0; i < 100; i++) {
-			// statements
-		}
+for (var i = 0; i < 100; i++) {
+	// statements
+}
 
-		if (true) {
-			// statements
-		} else {
-			// statements
-		}
+if (true) {
+	// statements
+} else {
+	// statements
+}
 
-		```
+```
 
-		E. Quotes
+E. Quotes
 
-		Whether you prefer single or double shouldn't matter, there is no difference in how JavaScript parses them. What **ABSOLUTELY MUST** be enforced is consistency. **Never mix quotes in the same project. Pick one style and stick with it.**
+Whether you prefer single or double shouldn't matter, there is no difference in how JavaScript parses them. What **ABSOLUTELY MUST** be enforced is consistency. **Never mix quotes in the same project. Pick one style and stick with it.**
 
-		F. End of Lines and Empty Lines
+F. End of Lines and Empty Lines
 
-		Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.
+Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.
 
 ## <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
 
-		A. Actual Types
+A. Actual Types
 
-		String:
+String:
 
-				typeof variable === "string"
+typeof variable === "string"
 
-		Number:
+Number:
 
-				typeof variable === "number"
+typeof variable === "number"
 
-		Boolean:
+Boolean:
 
-				typeof variable === "boolean"
+typeof variable === "boolean"
 
-		Object:
+Object:
 
-				typeof variable === "object"
+typeof variable === "object"
 
-		Array:
+Array:
 
-				Array.isArray( arrayLikeObject )
-				(wherever possible)
+Array.isArray( arrayLikeObject )
+(wherever possible)
 
-		Node:
+Node:
 
-				elem.nodeType === 1
+elem.nodeType === 1
 
-		null:
+null:
 
-				variable === null
+variable === null
 
-		null or undefined:
+null or undefined:
 
-				variable == null
+variable == null
 
-		undefined:
+undefined:
 
-			Global Variables:
+	Global Variables:
 
-				typeof variable === "undefined"
+typeof variable === "undefined"
 
-			Local Variables:
+	Local Variables:
 
-				variable === undefined
+variable === undefined
 
-			Properties:
+	Properties:
 
-				object.prop === undefined
-				object.hasOwnProperty( prop )
-				"prop" in object
+object.prop === undefined
+object.hasOwnProperty( prop )
+"prop" in object
 
-		B. Coerced Types
+B. Coerced Types
 
-		Consider the implications of the following...
+Consider the implications of the following...
 
-		Given this HTML:
+Given this HTML:
 
-		```html
+```html
 
-		<input type="text" id="foo-input" value="1">
+<input type="text" id="foo-input" value="1">
 
-		```
+```
 
 
-		```javascript
+```javascript
 
-		// 3.B.1.1
+// 3.B.1.1
 
-		// `foo` has been declared with the value `0` and its type is `number`
-		var foo = 0;
+// `foo` has been declared with the value `0` and its type is `number`
+var foo = 0;
 
-		// typeof foo;
-		// "number"
-		...
+// typeof foo;
+// "number"
+...
 
-		// Somewhere later in your code, you need to update `foo`
-		// with a new value derived from an input element
+// Somewhere later in your code, you need to update `foo`
+// with a new value derived from an input element
 
-		foo = document.getElementById("foo-input").value;
+foo = document.getElementById("foo-input").value;
 
-		// If you were to test `typeof foo` now, the result would be `string`
-		// This means that if you had logic that tested `foo` like:
+// If you were to test `typeof foo` now, the result would be `string`
+// This means that if you had logic that tested `foo` like:
 
-		if ( foo === 1 ) {
+if ( foo === 1 ) {
 
-			importantTask();
+	importantTask();
 
-		}
+}
 
-		// `importantTask()` would never be evaluated, even though `foo` has a value of "1"
+// `importantTask()` would never be evaluated, even though `foo` has a value of "1"
 
 
-		// 3.B.1.2
+// 3.B.1.2
 
-		// You can preempt issues by using smart coercion with unary + or - operators:
+// You can preempt issues by using smart coercion with unary + or - operators:
 
-		foo = +document.getElementById("foo-input").value;
-		//    ^ unary + operator will convert its right side operand to a number
+foo = +document.getElementById("foo-input").value;
+//    ^ unary + operator will convert its right side operand to a number
 
-		// typeof foo;
-		// "number"
+// typeof foo;
+// "number"
 
-		if ( foo === 1 ) {
+if ( foo === 1 ) {
 
-			importantTask();
+	importantTask();
 
-		}
+}
 
-		// `importantTask()` will be called
-		```
+// `importantTask()` will be called
+```
 
-		Here are some common cases along with coercions:
+Here are some common cases along with coercions:
 
 
-		```javascript
+```javascript
 
-		// 3.B.2.1
+// 3.B.2.1
 
-		var number = 1,
-			string = "1",
-			bool = false;
+var number = 1,
+	string = "1",
+	bool = false;
 
-		number;
-		// 1
+number;
+// 1
 
-		number + "";
-		// "1"
+number + "";
+// "1"
 
-		string;
-		// "1"
+string;
+// "1"
 
-		+string;
-		// 1
++string;
+// 1
 
-		+string++;
-		// 1
++string++;
+// 1
 
-		string;
-		// 2
+string;
+// 2
 
-		bool;
-		// false
+bool;
+// false
 
-		+bool;
-		// 0
++bool;
+// 0
 
-		bool + "";
-		// "false"
-		```
+bool + "";
+// "false"
+```
 
 
-		```javascript
-		// 3.B.2.2
+```javascript
+// 3.B.2.2
 
-		var number = 1,
-			string = "1",
-			bool = true;
+var number = 1,
+	string = "1",
+	bool = true;
 
-		string === number;
-		// false
+string === number;
+// false
 
-		string === number + "";
-		// true
+string === number + "";
+// true
 
-		+string === number;
-		// true
++string === number;
+// true
 
-		bool === number;
-		// false
+bool === number;
+// false
 
-		+bool === number;
-		// true
++bool === number;
+// true
 
-		bool === string;
-		// false
+bool === string;
+// false
 
-		bool === !!string;
-		// true
-		```
+bool === !!string;
+// true
+```
 
-		```javascript
-		// 3.B.2.3
+```javascript
+// 3.B.2.3
 
-		var array = [ "a", "b", "c" ];
+var array = [ "a", "b", "c" ];
 
-		!!~array.indexOf("a");
-		// true
+!!~array.indexOf("a");
+// true
 
-		!!~array.indexOf("b");
-		// true
+!!~array.indexOf("b");
+// true
 
-		!!~array.indexOf("c");
-		// true
+!!~array.indexOf("c");
+// true
 
-		!!~array.indexOf("d");
-		// false
+!!~array.indexOf("d");
+// false
 
-		// Note that the above should be considered "unnecessarily clever"
-		// Prefer the obvious approach of comparing the returned value of
-		// indexOf, like:
+// Note that the above should be considered "unnecessarily clever"
+// Prefer the obvious approach of comparing the returned value of
+// indexOf, like:
 
-		if ( array.indexOf( "a" ) >= 0 ) {
-			// ...
-		}
-		```
+if ( array.indexOf( "a" ) >= 0 ) {
+	// ...
+}
+```
 
-		```javascript
-		// 3.B.2.4
+```javascript
+// 3.B.2.4
 
 
-		var num = 2.5;
+var num = 2.5;
 
-		parseInt( num, 10 );
+parseInt( num, 10 );
 
-		// is the same as...
+// is the same as...
 
-		~~num;
+~~num;
 
-		num >> 0;
+num >> 0;
 
-		num >>> 0;
+num >>> 0;
 
-		// All result in 2
+// All result in 2
 
 
-		// Keep in mind however, that negative numbers will be treated differently...
+// Keep in mind however, that negative numbers will be treated differently...
 
-		var neg = -2.5;
+var neg = -2.5;
 
-		parseInt( neg, 10 );
+parseInt( neg, 10 );
 
-		// is the same as...
+// is the same as...
 
-		~~neg;
+~~neg;
 
-		neg >> 0;
+neg >> 0;
 
-		// All result in -2
-		// However...
+// All result in -2
+// However...
 
-		neg >>> 0;
+neg >>> 0;
 
-		// Will result in 4294967294
+// Will result in 4294967294
 
 
 
 
-		```
+```
 
 
 
 ## <a name="cond">Conditional Evaluation</a>
 
-		```javascript
+```javascript
 
-		// 4.1.1
-		// When only evaluating that an array has length,
-		// instead of this:
-		if ( array.length > 0 ) ...
+// 4.1.1
+// When only evaluating that an array has length,
+// instead of this:
+if ( array.length > 0 ) ...
 
-		// ...evaluate truthiness, like this:
-		if ( array.length ) ...
-
-
-		// 4.1.2
-		// When only evaluating that an array is empty,
-		// instead of this:
-		if ( array.length === 0 ) ...
-
-		// ...evaluate truthiness, like this:
-		if ( !array.length ) ...
+// ...evaluate truthiness, like this:
+if ( array.length ) ...
 
 
-		// 4.1.3
-		// When only evaluating that a string is not empty,
-		// instead of this:
-		if ( string !== "" ) ...
+// 4.1.2
+// When only evaluating that an array is empty,
+// instead of this:
+if ( array.length === 0 ) ...
 
-		// ...evaluate truthiness, like this:
-		if ( string ) ...
-
-
-		// 4.1.4
-		// When only evaluating that a string _is_ empty,
-		// instead of this:
-		if ( string === "" ) ...
-
-		// ...evaluate falsy-ness, like this:
-		if ( !string ) ...
+// ...evaluate truthiness, like this:
+if ( !array.length ) ...
 
 
-		// 4.1.5
-		// When only evaluating that a reference is true,
-		// instead of this:
-		if ( foo === true ) ...
+// 4.1.3
+// When only evaluating that a string is not empty,
+// instead of this:
+if ( string !== "" ) ...
 
-		// ...evaluate like you mean it, take advantage of built in capabilities:
-		if ( foo ) ...
-
-
-		// 4.1.6
-		// When evaluating that a reference is false,
-		// instead of this:
-		if ( foo === false ) ...
-
-		// ...use negation to coerce a true evaluation
-		if ( !foo ) ...
-
-		// ...Be careful, this will also match: 0, "", null, undefined, NaN
-		// If you _MUST_ test for a boolean false, then use
-		if ( foo === false ) ...
+// ...evaluate truthiness, like this:
+if ( string ) ...
 
 
-		// 4.1.7
-		// When only evaluating a ref that might be null or undefined, but NOT false, "" or 0,
-		// instead of this:
-		if ( foo === null || foo === undefined ) ...
+// 4.1.4
+// When only evaluating that a string _is_ empty,
+// instead of this:
+if ( string === "" ) ...
 
-		// ...take advantage of == type coercion, like this:
-		if ( foo == null ) ...
-
-		// Remember, using == will match a `null` to BOTH `null` and `undefined`
-		// but not `false`, "" or 0
-		null == undefined
-
-		```
-		ALWAYS evaluate for the best, most accurate result - the above is a guideline, not a dogma.
-
-		```javascript
-
-		// 4.2.1
-		// Type coercion and evaluation notes
-
-		// Prefer `===` over `==` (unless the case requires loose type evaluation)
-
-		// === does not coerce type, which means that:
-
-		"1" === 1;
-		// false
-
-		// == does coerce type, which means that:
-
-		"1" == 1;
-		// true
+// ...evaluate falsy-ness, like this:
+if ( !string ) ...
 
 
-		// 4.2.2
-		// Booleans, Truthies & Falsies
+// 4.1.5
+// When only evaluating that a reference is true,
+// instead of this:
+if ( foo === true ) ...
 
-		// Booleans:
-		true, false
+// ...evaluate like you mean it, take advantage of built in capabilities:
+if ( foo ) ...
 
-		// Truthy:
-		"foo", 1
 
-		// Falsy:
-		"", 0, null, undefined, NaN, void 0
+// 4.1.6
+// When evaluating that a reference is false,
+// instead of this:
+if ( foo === false ) ...
 
-		```
+// ...use negation to coerce a true evaluation
+if ( !foo ) ...
+
+// ...Be careful, this will also match: 0, "", null, undefined, NaN
+// If you _MUST_ test for a boolean false, then use
+if ( foo === false ) ...
+
+
+// 4.1.7
+// When only evaluating a ref that might be null or undefined, but NOT false, "" or 0,
+// instead of this:
+if ( foo === null || foo === undefined ) ...
+
+// ...take advantage of == type coercion, like this:
+if ( foo == null ) ...
+
+// Remember, using == will match a `null` to BOTH `null` and `undefined`
+// but not `false`, "" or 0
+null == undefined
+
+```
+ALWAYS evaluate for the best, most accurate result - the above is a guideline, not a dogma.
+
+```javascript
+
+// 4.2.1
+// Type coercion and evaluation notes
+
+// Prefer `===` over `==` (unless the case requires loose type evaluation)
+
+// === does not coerce type, which means that:
+
+"1" === 1;
+// false
+
+// == does coerce type, which means that:
+
+"1" == 1;
+// true
+
+
+// 4.2.2
+// Booleans, Truthies & Falsies
+
+// Booleans:
+true, false
+
+// Truthy:
+"foo", 1
+
+// Falsy:
+"", 0, null, undefined, NaN, void 0
+
+```
 
 
 ## <a name="practical">Practical Style</a>
 
-		```javascript
+```javascript
 
-		// 5.1.1
-		// A Practical Module
+// 5.1.1
+// A Practical Module
 
-		(function( global ) {
-			var Module = (function() {
+(function( global ) {
+	var Module = (function() {
 
-				var data = "secret";
+var data = "secret";
 
-				return {
-					// This is some boolean property
-					bool: true,
-					// Some string value
-					string: "a string",
-					// An array property
-					array: [ 1, 2, 3, 4 ],
-					// An object property
-					object: {
-						lang: "en-Us"
-					},
-					getData: function() {
-						// get the current value of `data`
-						return data;
-					},
-					setData: function( value ) {
-						// set the value of `data` and return it
-						return ( data = value );
-					}
-				};
-			})();
+return {
+	// This is some boolean property
+	bool: true,
+	// Some string value
+	string: "a string",
+	// An array property
+	array: [ 1, 2, 3, 4 ],
+	// An object property
+	object: {
+lang: "en-Us"
+	},
+	getData: function() {
+// get the current value of `data`
+return data;
+	},
+	setData: function( value ) {
+// set the value of `data` and return it
+return ( data = value );
+	}
+};
+	})();
 
-			// Other things might happen here
+	// Other things might happen here
 
-			// expose our module to the global object
-			global.Module = Module;
+	// expose our module to the global object
+	global.Module = Module;
 
-		})( this );
+})( this );
 
-		```
+```
 
-		```javascript
+```javascript
 
-		// 5.2.1
-		// A Practical Constructor
+// 5.2.1
+// A Practical Constructor
 
-		(function( global ) {
+(function( global ) {
 
-			function Ctor( foo ) {
+	function Ctor( foo ) {
 
-				this.foo = foo;
+this.foo = foo;
 
-				return this;
-			}
+return this;
+	}
 
-			Ctor.prototype.getFoo = function() {
-				return this.foo;
-			};
+	Ctor.prototype.getFoo = function() {
+return this.foo;
+	};
 
-			Ctor.prototype.setFoo = function( val ) {
-				return ( this.foo = val );
-			};
-
-
-			// To call constructor's without `new`, you might do this:
-			var ctor = function( foo ) {
-				return new Ctor( foo );
-			};
+	Ctor.prototype.setFoo = function( val ) {
+return ( this.foo = val );
+	};
 
 
-			// expose our constructor to the global object
-			global.ctor = ctor;
+	// To call constructor's without `new`, you might do this:
+	var ctor = function( foo ) {
+return new Ctor( foo );
+	};
 
-		})( this );
 
-		```
+	// expose our constructor to the global object
+	global.ctor = ctor;
+
+})( this );
+
+```
 
 
 
@@ -769,416 +769,416 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
 
-		A. You are not a human code compiler/compressor, so don't try to be one.
+A. You are not a human code compiler/compressor, so don't try to be one.
 
-		The following code is an example of egregious naming:
+The following code is an example of egregious naming:
 
-		```javascript
+```javascript
 
-		// 6.A.1.1
-		// Example of code with poor names
+// 6.A.1.1
+// Example of code with poor names
 
-		function q(s) {
-			return document.querySelectorAll(s);
-		}
-		var i,a=[],els=q("#foo");
-		for(i=0;i<els.length;i++){a.push(els[i]);}
-		```
+function q(s) {
+	return document.querySelectorAll(s);
+}
+var i,a=[],els=q("#foo");
+for(i=0;i<els.length;i++){a.push(els[i]);}
+```
 
-		Without a doubt, you've written code like this - hopefully that ends today.
+Without a doubt, you've written code like this - hopefully that ends today.
 
-		Here's the same piece of logic, but with kinder, more thoughtful naming (and a readable structure):
+Here's the same piece of logic, but with kinder, more thoughtful naming (and a readable structure):
 
-		```javascript
+```javascript
 
-		// 6.A.2.1
-		// Example of code with improved names
+// 6.A.2.1
+// Example of code with improved names
 
-		function query( selector ) {
-			return document.querySelectorAll( selector );
-		}
+function query( selector ) {
+	return document.querySelectorAll( selector );
+}
 
-		var idx = 0,
-			elements = [],
-			matches = query("#foo"),
-			length = matches.length;
+var idx = 0,
+	elements = [],
+	matches = query("#foo"),
+	length = matches.length;
 
-		for ( ; idx < length; idx++ ) {
-			elements.push( matches[ idx ] );
-		}
+for ( ; idx < length; idx++ ) {
+	elements.push( matches[ idx ] );
+}
 
-		```
+```
 
-		A few additional naming pointers:
+A few additional naming pointers:
 
-		```javascript
+```javascript
 
-		// 6.A.3.1
-		// Naming strings
+// 6.A.3.1
+// Naming strings
 
-		`dog` is a string
+`dog` is a string
 
 
-		// 6.A.3.2
-		// Naming arrays
+// 6.A.3.2
+// Naming arrays
 
-		`dogs` is an array of `dog` strings
+`dogs` is an array of `dog` strings
 
 
-		// 6.A.3.3
-		// Naming functions, objects, instances, etc
+// 6.A.3.3
+// Naming functions, objects, instances, etc
 
-		camelCase; function and var declarations
+camelCase; function and var declarations
 
 
-		// 6.A.3.4
-		// Naming constructors, prototypes, etc.
+// 6.A.3.4
+// Naming constructors, prototypes, etc.
 
-		PascalCase; constructor function
+PascalCase; constructor function
 
 
-		// 6.A.3.5
-		// Naming regular expressions
+// 6.A.3.5
+// Naming regular expressions
 
-		rDesc = //;
+rDesc = //;
 
 
-		// 6.A.3.6
-		// From the Google Closure Library Style Guide
+// 6.A.3.6
+// From the Google Closure Library Style Guide
 
-		functionNamesLikeThis;
-		variableNamesLikeThis;
-		ConstructorNamesLikeThis;
-		EnumNamesLikeThis;
-		methodNamesLikeThis;
-		SYMBOLIC_CONSTANTS_LIKE_THIS;
+functionNamesLikeThis;
+variableNamesLikeThis;
+ConstructorNamesLikeThis;
+EnumNamesLikeThis;
+methodNamesLikeThis;
+SYMBOLIC_CONSTANTS_LIKE_THIS;
 
-		```
+```
 
-		B. Faces of `this`
+B. Faces of `this`
 
-		Beyond the generally well known use cases of `call` and `apply`, always prefer `.bind( this )` or a functional equivalent, for creating `BoundFunction` definitions for later invocation. Only resort to aliasing when no preferable option is available.
+Beyond the generally well known use cases of `call` and `apply`, always prefer `.bind( this )` or a functional equivalent, for creating `BoundFunction` definitions for later invocation. Only resort to aliasing when no preferable option is available.
 
-		```javascript
+```javascript
 
-		// 6.B.1
-		function Device( opts ) {
+// 6.B.1
+function Device( opts ) {
 
-			this.value = null;
+	this.value = null;
 
-			// open an async stream,
-			// this will be called continuously
-			stream.read( opts.path, function( data ) {
+	// open an async stream,
+	// this will be called continuously
+	stream.read( opts.path, function( data ) {
 
-				// Update this instance's current value
-				// with the most recent value from the
-				// data stream
-				this.value = data;
+// Update this instance's current value
+// with the most recent value from the
+// data stream
+this.value = data;
 
-			}.bind(this) );
+	}.bind(this) );
 
-			// Throttle the frequency of events emitted from
-			// this Device instance
-			setInterval(function() {
+	// Throttle the frequency of events emitted from
+	// this Device instance
+	setInterval(function() {
 
-				// Emit a throttled event
-				this.emit("event");
+// Emit a throttled event
+this.emit("event");
 
-			}.bind(this), opts.freq || 100 );
-		}
+	}.bind(this), opts.freq || 100 );
+}
 
-		// Just pretend we've inherited EventEmitter ;)
+// Just pretend we've inherited EventEmitter ;)
 
-		```
+```
 
-		When unavailable, functional equivalents to `.bind` exist in many modern JavaScript libraries.
+When unavailable, functional equivalents to `.bind` exist in many modern JavaScript libraries.
 
 
-		```javascript
-		// 6.B.2
+```javascript
+// 6.B.2
 
-		// eg. lodash/underscore, _.bind()
-		function Device( opts ) {
+// eg. lodash/underscore, _.bind()
+function Device( opts ) {
 
-			this.value = null;
+	this.value = null;
 
-			stream.read( opts.path, _.bind(function( data ) {
+	stream.read( opts.path, _.bind(function( data ) {
 
-				this.value = data;
+this.value = data;
 
-			}, this) );
+	}, this) );
 
-			setInterval(_.bind(function() {
+	setInterval(_.bind(function() {
 
-				this.emit("event");
+this.emit("event");
 
-			}, this), opts.freq || 100 );
-		}
+	}, this), opts.freq || 100 );
+}
 
-		// eg. jQuery.proxy
-		function Device( opts ) {
+// eg. jQuery.proxy
+function Device( opts ) {
 
-			this.value = null;
+	this.value = null;
 
-			stream.read( opts.path, jQuery.proxy(function( data ) {
+	stream.read( opts.path, jQuery.proxy(function( data ) {
 
-				this.value = data;
+this.value = data;
 
-			}, this) );
+	}, this) );
 
-			setInterval( jQuery.proxy(function() {
+	setInterval( jQuery.proxy(function() {
 
-				this.emit("event");
+this.emit("event");
 
-			}, this), opts.freq || 100 );
-		}
+	}, this), opts.freq || 100 );
+}
 
-		// eg. dojo.hitch
-		function Device( opts ) {
+// eg. dojo.hitch
+function Device( opts ) {
 
-			this.value = null;
+	this.value = null;
 
-			stream.read( opts.path, dojo.hitch( this, function( data ) {
+	stream.read( opts.path, dojo.hitch( this, function( data ) {
 
-				this.value = data;
+this.value = data;
 
-			}) );
+	}) );
 
-			setInterval( dojo.hitch( this, function() {
+	setInterval( dojo.hitch( this, function() {
 
-				this.emit("event");
+this.emit("event");
 
-			}), opts.freq || 100 );
-		}
+	}), opts.freq || 100 );
+}
 
-		```
+```
 
-		As a last resort, create an alias to `this` using `self` as an Identifier. This is extremely bug prone and should be avoided whenever possible.
+As a last resort, create an alias to `this` using `self` as an Identifier. This is extremely bug prone and should be avoided whenever possible.
 
-		```javascript
+```javascript
 
-		// 6.B.3
+// 6.B.3
 
-		function Device( opts ) {
-			var self = this;
+function Device( opts ) {
+	var self = this;
 
-			this.value = null;
+	this.value = null;
 
-			stream.read( opts.path, function( data ) {
+	stream.read( opts.path, function( data ) {
 
-				self.value = data;
+self.value = data;
 
-			});
+	});
 
-			setInterval(function() {
+	setInterval(function() {
 
-				self.emit("event");
+self.emit("event");
 
-			}, opts.freq || 100 );
-		}
+	}, opts.freq || 100 );
+}
 
-		```
+```
 
 
-		C. Use `thisArg`
+C. Use `thisArg`
 
-		Several prototype methods of ES 5.1 built-ins come with a special `thisArg` signature, which should be used whenever possible
+Several prototype methods of ES 5.1 built-ins come with a special `thisArg` signature, which should be used whenever possible
 
-		```javascript
+```javascript
 
-		// 6.C.1
+// 6.C.1
 
-		var obj;
+var obj;
 
-		obj = { f: "foo", b: "bar", q: "qux" };
+obj = { f: "foo", b: "bar", q: "qux" };
 
-		Object.keys( obj ).forEach(function( key ) {
+Object.keys( obj ).forEach(function( key ) {
 
-			// |this| now refers to `obj`
+	// |this| now refers to `obj`
 
-			console.log( this[ key ] );
+	console.log( this[ key ] );
 
-		}, obj ); // <-- the last arg is `thisArg`
+}, obj ); // <-- the last arg is `thisArg`
 
-		// Prints...
+// Prints...
 
-		// "foo"
-		// "bar"
-		// "qux"
+// "foo"
+// "bar"
+// "qux"
 
-		```
+```
 
-		`thisArg` can be used with `Array.prototype.every`, `Array.prototype.forEach`, `Array.prototype.some`, `Array.prototype.map`, `Array.prototype.filter`
+`thisArg` can be used with `Array.prototype.every`, `Array.prototype.forEach`, `Array.prototype.some`, `Array.prototype.map`, `Array.prototype.filter`
 
 ## <a name="misc">Misc</a>
 
-		This section will serve to illustrate ideas and concepts that should not be considered dogma, but instead exists to encourage questioning practices in an attempt to find better ways to do common JavaScript programming tasks.
+This section will serve to illustrate ideas and concepts that should not be considered dogma, but instead exists to encourage questioning practices in an attempt to find better ways to do common JavaScript programming tasks.
 
-		A. Using `switch` should be avoided, modern method tracing will blacklist functions with switch statements
+A. Using `switch` should be avoided, modern method tracing will blacklist functions with switch statements
 
-		There seems to be drastic improvements to the execution of `switch` statements in latest releases of Firefox and Chrome.
-		http://jsperf.com/switch-vs-object-literal-vs-module
+There seems to be drastic improvements to the execution of `switch` statements in latest releases of Firefox and Chrome.
+http://jsperf.com/switch-vs-object-literal-vs-module
 
-		Notable improvements can be witnessed here as well:
-		https://github.com/rwldrn/idiomatic.js/issues/13
+Notable improvements can be witnessed here as well:
+https://github.com/rwldrn/idiomatic.js/issues/13
 
-		```javascript
+```javascript
 
-		// 7.A.1.1
-		// An example switch statement
+// 7.A.1.1
+// An example switch statement
 
-		switch( foo ) {
-			case "alpha":
-				alpha();
-				break;
-			case "beta":
-				beta();
-				break;
-			default:
-				// something to default to
-				break;
-		}
+switch( foo ) {
+	case "alpha":
+alpha();
+break;
+	case "beta":
+beta();
+break;
+	default:
+// something to default to
+break;
+}
 
-		// 7.A.1.2
-		// A alternate approach that supports composability and reusability is to
-		// use an object to store "cases" and a function to delegate:
+// 7.A.1.2
+// A alternate approach that supports composability and reusability is to
+// use an object to store "cases" and a function to delegate:
 
-		var cases, delegator;
+var cases, delegator;
 
-		// Example returns for illustration only.
-		cases = {
-			alpha: function() {
-				// statements
-				// a return
-				return [ "Alpha", arguments.length ];
-			},
-			beta: function() {
-				// statements
-				// a return
-				return [ "Beta", arguments.length ];
-			},
-			_default: function() {
-				// statements
-				// a return
-				return [ "Default", arguments.length ];
-			}
-		};
+// Example returns for illustration only.
+cases = {
+	alpha: function() {
+// statements
+// a return
+return [ "Alpha", arguments.length ];
+	},
+	beta: function() {
+// statements
+// a return
+return [ "Beta", arguments.length ];
+	},
+	_default: function() {
+// statements
+// a return
+return [ "Default", arguments.length ];
+	}
+};
 
-		delegator = function() {
-			var args, key, delegate;
+delegator = function() {
+	var args, key, delegate;
 
-			// Transform arguments list into an array
-			args = [].slice.call( arguments );
+	// Transform arguments list into an array
+	args = [].slice.call( arguments );
 
-			// shift the case key from the arguments
-			key = args.shift();
+	// shift the case key from the arguments
+	key = args.shift();
 
-			// Assign the default case handler
-			delegate = cases._default;
+	// Assign the default case handler
+	delegate = cases._default;
 
-			// Derive the method to delegate operation to
-			if ( cases.hasOwnProperty( key ) ) {
-				delegate = cases[ key ];
-			}
+	// Derive the method to delegate operation to
+	if ( cases.hasOwnProperty( key ) ) {
+delegate = cases[ key ];
+	}
 
-			// The scope arg could be set to something specific,
-			// in this case, |null| will suffice
-			return delegate.apply( null, args );
-		};
+	// The scope arg could be set to something specific,
+	// in this case, |null| will suffice
+	return delegate.apply( null, args );
+};
 
-		// 7.A.1.3
-		// Put the API in 7.A.1.2 to work:
+// 7.A.1.3
+// Put the API in 7.A.1.2 to work:
 
-		delegator( "alpha", 1, 2, 3, 4, 5 );
-		// [ "Alpha", 5 ]
+delegator( "alpha", 1, 2, 3, 4, 5 );
+// [ "Alpha", 5 ]
 
-		// Of course, the `case` key argument could easily be based
-		// on some other arbitrary condition.
+// Of course, the `case` key argument could easily be based
+// on some other arbitrary condition.
 
-		var caseKey, someUserInput;
+var caseKey, someUserInput;
 
-		// Possibly some kind of form input?
-		someUserInput = 9;
+// Possibly some kind of form input?
+someUserInput = 9;
 
-		if ( someUserInput > 10 ) {
-			caseKey = "alpha";
-		} else {
-			caseKey = "beta";
-		}
+if ( someUserInput > 10 ) {
+	caseKey = "alpha";
+} else {
+	caseKey = "beta";
+}
 
-		// or...
+// or...
 
-		caseKey = someUserInput > 10 ? "alpha" : "beta";
+caseKey = someUserInput > 10 ? "alpha" : "beta";
 
-		// And then...
+// And then...
 
-		delegator( caseKey, someUserInput );
-		// [ "Beta", 1 ]
+delegator( caseKey, someUserInput );
+// [ "Beta", 1 ]
 
-		// And of course...
+// And of course...
 
-		delegator();
-		// [ "Default", 0 ]
+delegator();
+// [ "Default", 0 ]
 
 
-		```
+```
 
-		B. Early returns promote code readability with negligible performance difference
+B. Early returns promote code readability with negligible performance difference
 
-		```javascript
+```javascript
 
-		// 7.B.1.1
-		// Bad:
-		function returnLate( foo ) {
-			var ret;
+// 7.B.1.1
+// Bad:
+function returnLate( foo ) {
+	var ret;
 
-			if ( foo ) {
-				ret = "foo";
-			} else {
-				ret = "quux";
-			}
-			return ret;
-		}
+	if ( foo ) {
+ret = "foo";
+	} else {
+ret = "quux";
+	}
+	return ret;
+}
 
-		// Good:
+// Good:
 
-		function returnEarly( foo ) {
+function returnEarly( foo ) {
 
-			if ( foo ) {
-				return "foo";
-			}
-			return "quux";
-		}
+	if ( foo ) {
+return "foo";
+	}
+	return "quux";
+}
 
-		```
+```
 
 
 ## <a name="native">Native & Host Objects</a>
 
-		The basic principle here is:
+The basic principle here is:
 
-		### Don't do stupid shit and everything will be ok.
+### Don't do stupid shit and everything will be ok.
 
-		To reinforce this concept, please watch the following presentation:
+To reinforce this concept, please watch the following presentation:
 
-		#### “Everything is Permitted: Extending Built-ins” by Andrew Dupont (JSConf2011, Portland, Oregon)
+#### “Everything is Permitted: Extending Built-ins” by Andrew Dupont (JSConf2011, Portland, Oregon)
 
-		<iframe src="http://blip.tv/play/g_Mngr6LegI.html" width="480" height="346" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#g_Mngr6LegI" style="display:none"></embed>
+<iframe src="http://blip.tv/play/g_Mngr6LegI.html" width="480" height="346" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#g_Mngr6LegI" style="display:none"></embed>
 
-		http://blip.tv/jsconf/jsconf2011-andrew-dupont-everything-is-permitted-extending-built-ins-5211542
+http://blip.tv/jsconf/jsconf2011-andrew-dupont-everything-is-permitted-extending-built-ins-5211542
 
 
 ## <a name="comments">Comments</a>
 
-		#### Single line above the code that is subject
-		#### Multiline is good
-		#### End of line comments are prohibited!
-		#### JSDoc style is good, but requires a significant time investment
+#### Single line above the code that is subject
+#### Multiline is good
+#### End of line comments are prohibited!
+#### JSDoc style is good, but requires a significant time investment
 
 
 ## <a name="language">One Language Code</a>
 
-		Programs should be written in one language, whatever that language may be, as dictated by the maintainer or maintainers.
+Programs should be written in one language, whatever that language may be, as dictated by the maintainer or maintainers.
 
 ## Appendix
 
