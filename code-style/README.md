@@ -1,8 +1,8 @@
 # Code style
 
-1. [Design principles](design-principles.md)
-  * [Components](components.md)
-  * [Utilities](utilities.md)
+1. [Design principles](design-principles)
+  * [Components](design-principles/components.md)
+  * [Utilities](design-principles/utilities.md)
 2. [Naming conventions](naming-conventions.md)
   * [u-utilityName](naming-conventions.md#u-utilityName)
   * [ComponentName](naming-conventions.md#ComponentName)
