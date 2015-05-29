@@ -19,22 +19,22 @@ Styles are divided in 3 categories to maintain a clarity.
 2. [Components](components.md)
 3. [Utilities](utilities.md)
 
-#### 1. Base styles
+### 1. Base styles
 Base rules are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
 
 [More on Base styles](base-styles.md)
 
-#### 2. Components
+### 2. Components
 Each component should have a single focus and contain everything necessary to realise a specific part of the UI. Components may contain HTML, CSS, JavaScript, and associated assets without making assumptions about the outer rendering context.
 
 [More on Components](components.md)
 
-#### 3. Utilities
+### 3. Utilities
 Utility classes map to fixed, low-level, structural and positional traits. These classes can be used in a component's HTML. Because utilities are so focused, they will generally use !important to ensure their styles are always applied.
 
 [More on Utilities](utilities.md)
 
-Directory structure example:
+### Directory structure example:
 ```
 scss/
 ├── main.scss

@@ -5,8 +5,8 @@ using hyphens merely to separate words). This helps to work around the current
 limits of applying CSS to the DOM (i.e., the lack of style encapsulation), and
 to better communicate the relationships between classes.
 
-The primary architectural division is between **[utilities](utilities)** and
-**[components](components)**.
+The primary architectural division is between **[utilities](../design-principles/utilities.md)** and
+**[components](../design-principles/components.md)**.
 
 **Table of contents**
 
