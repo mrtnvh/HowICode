@@ -7,3 +7,5 @@
 * Chrome for Android
 * Android Browser 4.4+
 * iOS Safari 7+
+
+Users with IE8 and lower get a _outdated browser_ message, provided by [Outdated Browser](http://outdatedbrowser.com/nl) plugin.

@@ -26,20 +26,20 @@ Base rules are the defaults. They are almost exclusively single element selector
 html,
 body,
 form {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 input[type=text] {
-  border: 1px solid #999;
+	border: 1px solid #999;
 }
 
 a {
-  color: #039;
-  
-  &:hover {
-    color: #03C;
-  }
+	color: #039;
+
+	&:hover {
+		color: #03C;
+	}
 }
 ```
 

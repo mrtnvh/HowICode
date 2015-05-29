@@ -1,24 +1,24 @@
 # Code style
 1. [General principles](general-principles)
 2. [Design principles](design-principles)
-  * [Base styles](design-principles/base-styles.md)
-  * [Components](design-principles/components.md)
-  * [Utilities](design-principles/utilities.md)
+	* [Base styles](design-principles/base-styles.md)
+	* [Components](design-principles/components.md)
+	* [Utilities](design-principles/utilities.md)
 3. [Naming conventions](naming-conventions.md)
-  * [u-utilityName](naming-conventions.md#u-utilityName)
-  * [ComponentName](naming-conventions.md#ComponentName)
-  * [ComponentName--modifierName](naming-conventions.md#ComponentName--modifierName)
-  * [ComponentName-descendentName](naming-conventions.md#ComponentName-descendentName)
-  * [ComponentName.is-stateOfComponent](naming-conventions.md#is-stateOfComponent)
+	* [u-utilityName](naming-conventions.md#u-utilityName)
+	* [ComponentName](naming-conventions.md#ComponentName)
+	* [ComponentName--modifierName](naming-conventions.md#ComponentName--modifierName)
+	* [ComponentName-descendentName](naming-conventions.md#ComponentName-descendentName)
+	* [ComponentName.is-stateOfComponent](naming-conventions.md#is-stateOfComponent)
 4. [HTML](html)
-  * [Format](html#html-format)
-  * [Attribute order](html#html-attrs)
-  * [Naming](html#html-naming)
-  * [Practical example](html#html-example)
+	* [Format](html#html-format)
+	* [Attribute order](html#html-attrs)
+	* [Naming](html#html-naming)
+	* [Practical example](html#html-example)
 5. [CSS](css)
-  * [Comments](#css-comments)
-  * [Format](#css-format)
-  * [Practical example](#css-example)
+	* [Comments](#css-comments)
+	* [Format](#css-format)
+	* [Practical example](#css-example)
 6. Javascript
 
 
@@ -73,7 +73,7 @@ Example:
  */
 
 /* Thematic section comment block
-   ========================================================================== */
+	 ========================================================================== */
 
 /* Basic comment */
 ```
@@ -92,32 +92,32 @@ in useful diffs and blames.
 * Include a single space after the colon of a declaration.
 * Use lowercase and shorthand hex values, e.g., `#aaa`.
 * Use single or double quotes consistently. Preference is for double quotes,
-  e.g., `content: ""`.
+	e.g., `content: ""`.
 * Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
 * _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
 * Include a space after each comma in comma-separated property or function
-  values.
+	values.
 * Include a semi-colon at the end of the last declaration in a declaration
-  block.
+	block.
 * Place the closing brace of a ruleset in the same column as the first
-  character of the ruleset.
+	character of the ruleset.
 * Separate each ruleset by a blank line.
 
 ```css
 .selector-1,
 .selector-2,
 .selector-3[type="text"] {
-  background: #fff;
-  background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
-  box-sizing: border-box;
-  color: #333;
-  display: block;
-  font-family: helvetica, arial, sans-serif;
+	background: #fff;
+	background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+	box-sizing: border-box;
+	color: #333;
+	display: block;
+	font-family: helvetica, arial, sans-serif;
 }
 
 .selector-a,
 .selector-b {
-  padding: 10px;
+	padding: 10px;
 }
 ```
 
@@ -128,15 +128,15 @@ requires otherwise.
 
 ```css
 .selector {
-  background: #000;
-  border: 10px solid #333;
-  box-sizing: border-box;
-  color: #fff;
-  display: inline-block;
-  font-family: sans-serif;
-  font-size: 16px;
-  text-align: right;
-  width: 100%;
+	background: #000;
+	border: 10px solid #333;
+	box-sizing: border-box;
+	color: #fff;
+	display: inline-block;
+	font-family: sans-serif;
+	font-size: 16px;
+	text-align: right;
+	width: 100%;
 }
 ```
 
@@ -158,12 +158,12 @@ readability and produce more useful diffs.
 
 ```css
 .selector {
-  background-image:
-    linear-gradient(#fff, #ccc),
-    linear-gradient(#f3c, #4ec);
-  box-shadow:
-    1px 1px 1px #000,
-    2px 2px 1px 1px #ccc inset;
+	background-image:
+		linear-gradient(#fff, #ccc),
+		linear-gradient(#f3c, #4ec);
+	box-shadow:
+		1px 1px 1px #000,
+		2px 2px 1px 1px #ccc inset;
 }
 ```
 
@@ -200,9 +200,9 @@ An example of various conventions.
  */
 
 .Grid {
-  font-size: 0; /* 1 */
-  height: 100%;
-  white-space: nowrap; /* 2 */
+	font-size: 0; /* 1 */
+	height: 100%;
+	white-space: nowrap; /* 2 */
 }
 
 /**
@@ -216,26 +216,26 @@ An example of various conventions.
  */
 
 .Grid-cell {
-  border: 2px solid #333;
-  box-sizing: border-box;
-  display: inline-block;
-  font-size: 1rem; /* 1 */
-  height: 100%;
-  overflow: hidden;
-  padding: 0 10px; /* 2 */
-  position: relative;
-  vertical-align: top;
-  white-space: normal; /* 3 */
+	border: 2px solid #333;
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 1rem; /* 1 */
+	height: 100%;
+	overflow: hidden;
+	padding: 0 10px; /* 2 */
+	position: relative;
+	vertical-align: top;
+	white-space: normal; /* 3 */
 }
 
 /* Cell states */
 
 .Grid-cell.is-animating {
-  background-color: #fffdec;
+	background-color: #fffdec;
 }
 
 /* Cell dimension modifiers
-   ========================================================================== */
+	 ========================================================================== */
 
 .Grid-cell--1 { width: 10%; }
 .Grid-cell--2 { width: 20%; }
@@ -244,11 +244,11 @@ An example of various conventions.
 .Grid-cell--5 { width: 50%; }
 
 /* Cell modifiers
-   ========================================================================== */
+	 ========================================================================== */
 
 .Grid-cell--detail,
 .Grid-cell--important {
-  border-width: 4px;
+	border-width: 4px;
 }
 ```
 
