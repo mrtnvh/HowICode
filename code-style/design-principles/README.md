@@ -15,44 +15,26 @@ A component-based system allows for the implementation and composition of loosel
 ## Modularity
 CSS is divided in 3 categories to keep a clear overview.
 
-1. Base styles
-2. Components
-3. Utilities
+* [Base styles](design-principles/base-styles.md)
+* [Components](design-principles/components.md)
+* [Utilities](design-principles/utilities.md)
 
 ### 1. Base styles
 Base rules are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
 
-```scss
-html,
-body,
-form {
-	margin: 0;
-	padding: 0;
-}
-
-input[type=text] {
-	border: 1px solid #999;
-}
-
-a {
-	color: #039;
-
-	&:hover {
-		color: #03C;
-	}
-}
-```
+[More on Base styles](base-styles.md)
 
 ### 2. Components
 Each component should have a single focus and contain everything necessary to realise a specific part of the UI. Components may contain HTML, CSS, JavaScript, and associated assets without making assumptions about the outer rendering context.
 
-[More on components](components.md)
+[More on Components](components.md)
 
 ### 3. Utilities
 Utility classes map to fixed, low-level, structural and positional traits. These classes can be used in a component's HTML. Because utilities are so focused, they will generally use !important to ensure their styles are always applied.
 
 [More on Utilities](utilities.md)
 
+--
 
 <a name="cohesion"></a>
 ## Cohesion
