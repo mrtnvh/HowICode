@@ -1,4 +1,6 @@
-My design principles are largely based on [SUIT CSS](https://github.com/suitcss/suit/tree/master/doc), a methodology focused on improving the CSS authoring experience for component-based development.
+# Design principles
+
+My design principles are largely (read almost completely) based on [SUIT CSS](https://github.com/suitcss/suit/tree/master/doc), a methodology focused on improving the CSS authoring experience for component-based development.
 
 A component-based system allows for the implementation and composition of loosely coupled, independent units into well-defined composite objects. Components are encapsulated but are able to interoperate via interfaces/events.
 
