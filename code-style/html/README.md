@@ -1,4 +1,3 @@
-<a name="html"></a>
 # HTML
 
 <a name="html-format"></a>
