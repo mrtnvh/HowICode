@@ -25,7 +25,7 @@ I use the following tools and apps:
 ## GUI:
 **Mac OS**
 * [Sublime Text 3](http://www.sublimetext.com/3): Code editor
-  * Package Control [with these packages] (https://github.com/vanhoofmaarten/HowICode/blob/master/sublime-package-control-settings.json)
+  * Package Control [with these packages](https://github.com/vanhoofmaarten/HowICode/blob/master/sublime-package-control-settings.json)
 * [Sourcetree](https://www.sourcetreeapp.com/): Git
 * [Kaleidoscope](http://www.kaleidoscopeapp.com/): Diff tool
 * [iTerm 2](https://www.iterm2.com/): Terminal on steroids
@@ -35,14 +35,18 @@ I use the following tools and apps:
 * [IIS](https://www.iis.net/): Webserver that comes with Windows
 * [ConEmu](https://www.sourcetreeapp.com/): Alternative for cmd.exe
 * [Sourcetree](https://www.sourcetreeapp.com/) for Windows
- 
+
 **Web**
+* [Google](http://google.com): Got a question? Google it.
 * [Github](/): Web-based Git client
 * [Beanstalk](beanstalkapp.com): Web-based Git client
 * [Basecamp](http://basecamp.com/): Project management
+* [Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/) : Web performance test
+* [Google Analytics](http://www.google.be/intl/nl/analytics/) : Get analytics from your website / app.
+* []
 
 
 
-## Software frameworks:
+## Favorite frameworks:
 * Suitstrap : Bootstrap fork complying to own naming conventions
-* 
+*
