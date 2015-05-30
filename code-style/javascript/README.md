@@ -327,53 +327,53 @@ A. Actual Types
 
 String:
 
-typeof variable === "string"
+```typeof variable === "string"```
 
 Number:
 
-typeof variable === "number"
+```typeof variable === "number"```
 
 Boolean:
 
-typeof variable === "boolean"
+```typeof variable === "boolean"```
 
 Object:
 
-typeof variable === "object"
+```typeof variable === "object"```
 
 Array:
-
+```
 Array.isArray( arrayLikeObject )
 (wherever possible)
-
+```
 Node:
 
-elem.nodeType === 1
+```elem.nodeType === 1```
 
 null:
 
-variable === null
+```variable === null```
 
 null or undefined:
 
-variable == null
+```variable == null```
 
 undefined:
 
-	Global Variables:
+Global Variables:
 
-typeof variable === "undefined"
+typeof variable === "undefined"```
 
-	Local Variables:
+Local Variables:
 
-variable === undefined
+```variable === undefined```
 
-	Properties:
-
+Properties:
+```
 object.prop === undefined
 object.hasOwnProperty( prop )
 "prop" in object
-
+```
 B. Coerced Types
 
 Consider the implications of the following...
