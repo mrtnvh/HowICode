@@ -22,14 +22,3 @@ Do what you want in development, but be sure remove all excess baggage for produ
 ## 3. Adapt
 Keep your eyes open for news, opinions and studies. They could benefit your work.
 A good starting point: [the awesome list](https://github.com/sindresorhus/awesome)
-
-Most of my code is inspired by the following principles:
-* [Responsive webdesign](http://en.wikipedia.org/wiki/Responsive_web_design)
-* [Mobile first](http://zurb.com/word/mobile-first)
-* [Progressive enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement)
-* [Atomic Design](http://bradfrostweb.com/blog/post/atomic-web-design/)
-* [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc/README.md)
-* [SMACCS](https://smacss.com/)
-* [Idiomatic JS](https://github.com/rwaldron/idiomatic.js/)
-* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
-* [Idiomatic HTML](https://github.com/necolas/idiomatic-html)

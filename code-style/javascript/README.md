@@ -866,10 +866,10 @@ function Device( opts ) {
 	// this will be called continuously
 	stream.read( opts.path, function( data ) {
 
-// Update this instance's current value
-// with the most recent value from the
-// data stream
-this.value = data;
+		// Update this instance's current value
+		// with the most recent value from the
+		// data stream
+		this.value = data;
 
 	}.bind(this) );
 
@@ -877,14 +877,13 @@ this.value = data;
 	// this Device instance
 	setInterval(function() {
 
-// Emit a throttled event
-this.emit("event");
+		// Emit a throttled event
+		this.emit("event");
 
 	}.bind(this), opts.freq || 100 );
 }
 
 // Just pretend we've inherited EventEmitter ;)
-
 ```
 
 When unavailable, functional equivalents to `.bind` exist in many modern JavaScript libraries.
@@ -900,13 +899,13 @@ function Device( opts ) {
 
 	stream.read( opts.path, _.bind(function( data ) {
 
-this.value = data;
+		this.value = data;
 
 	}, this) );
 
 	setInterval(_.bind(function() {
 
-this.emit("event");
+		this.emit("event");
 
 	}, this), opts.freq || 100 );
 }
@@ -918,13 +917,13 @@ function Device( opts ) {
 
 	stream.read( opts.path, jQuery.proxy(function( data ) {
 
-this.value = data;
+		this.value = data;
 
 	}, this) );
 
 	setInterval( jQuery.proxy(function() {
 
-this.emit("event");
+		this.emit("event");
 
 	}, this), opts.freq || 100 );
 }
@@ -936,13 +935,13 @@ function Device( opts ) {
 
 	stream.read( opts.path, dojo.hitch( this, function( data ) {
 
-this.value = data;
+		this.value = data;
 
 	}) );
 
 	setInterval( dojo.hitch( this, function() {
 
-this.emit("event");
+		this.emit("event");
 
 	}), opts.freq || 100 );
 }
@@ -962,13 +961,13 @@ function Device( opts ) {
 
 	stream.read( opts.path, function( data ) {
 
-self.value = data;
+		self.value = data;
 
 	});
 
 	setInterval(function() {
 
-self.emit("event");
+		self.emit("event");
 
 	}, opts.freq || 100 );
 }
@@ -1025,14 +1024,14 @@ https://github.com/rwldrn/idiomatic.js/issues/13
 
 switch( foo ) {
 	case "alpha":
-alpha();
-break;
+		alpha();
+		break;
 	case "beta":
-beta();
-break;
+		beta();
+		break;
 	default:
-// something to default to
-break;
+		// something to default to
+		break;
 }
 
 // 7.A.1.2
@@ -1044,19 +1043,19 @@ var cases, delegator;
 // Example returns for illustration only.
 cases = {
 	alpha: function() {
-// statements
-// a return
-return [ "Alpha", arguments.length ];
+		// statements
+		// a return
+		return [ "Alpha", arguments.length ];
 	},
 	beta: function() {
-// statements
-// a return
-return [ "Beta", arguments.length ];
+		// statements
+		// a return
+		return [ "Beta", arguments.length ];
 	},
 	_default: function() {
-// statements
-// a return
-return [ "Default", arguments.length ];
+		// statements
+		// a return
+		return [ "Default", arguments.length ];
 	}
 };
 
@@ -1074,7 +1073,7 @@ delegator = function() {
 
 	// Derive the method to delegate operation to
 	if ( cases.hasOwnProperty( key ) ) {
-delegate = cases[ key ];
+		delegate = cases[ key ];
 	}
 
 	// The scope arg could be set to something specific,
