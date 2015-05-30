@@ -362,7 +362,7 @@ undefined:
 
 Global Variables:
 
-typeof variable === "undefined"```
+```typeof variable === "undefined"```
 
 Local Variables:
 
@@ -1157,11 +1157,11 @@ return "foo";
 
 The basic principle here is:
 
-### Don't do stupid shit and everything will be ok.
+**Don't do stupid shit and everything will be ok.**
 
 To reinforce this concept, please watch the following presentation:
 
-#### “Everything is Permitted: Extending Built-ins” by Andrew Dupont (JSConf2011, Portland, Oregon)
+_“Everything is Permitted: Extending Built-ins” by Andrew Dupont (JSConf2011, Portland, Oregon)_
 
 <iframe src="http://blip.tv/play/g_Mngr6LegI.html" width="480" height="346" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#g_Mngr6LegI" style="display:none"></embed>
 
@@ -1170,10 +1170,10 @@ http://blip.tv/jsconf/jsconf2011-andrew-dupont-everything-is-permitted-extending
 
 ## <a name="comments">Comments</a>
 
-#### Single line above the code that is subject
-#### Multiline is good
-#### End of line comments are prohibited!
-#### JSDoc style is good, but requires a significant time investment
+* Single line above the code that is subject
+* Multiline is good
+* End of line comments are prohibited!
+* JSDoc style is good, but requires a significant time investment
 
 
 ## <a name="language">One Language Code</a>
