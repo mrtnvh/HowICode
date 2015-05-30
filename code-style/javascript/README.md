@@ -1,9 +1,5 @@
 # JavaScript
 
-> ### "Arguments over style are pointless. There should be a style guide, and you should follow it"
->_Rebecca_ _Murphey_
-
-
 ## Table of Contents
 * [Preface](#preface)
 * [Whitespace](#whitespace)
