@@ -31,12 +31,14 @@ I use the following tools and apps:
 * [Kaleidoscope](http://www.kaleidoscopeapp.com/): Diff tool
 * [iTerm 2](https://www.iterm2.com/): Terminal on steroids
 * [BlueHarvest](http://zeroonetwenty.com/blueharvest): Keep disks clean of Mac OS metadata
+* [Skype](http://www.skype.com/): Internal company chat
 
 **Windows**
 * [Visual Studio Community](https://www.visualstudio.com/) - Code editor and .NET builder
 * [IIS](https://www.iis.net/): Webserver that comes with Windows
 * [ConEmu](https://www.sourcetreeapp.com/): Alternative for cmd.exe
 * [Sourcetree](https://www.sourcetreeapp.com/) for Windows
+* [Skype](http://www.skype.com/): Internal company chat
 
 **Web**
 * [Google](http://google.com): Got a question? Google it.
