@@ -29,6 +29,7 @@ I use the following tools and apps:
 * [Sourcetree](https://www.sourcetreeapp.com/): Git
 * [Kaleidoscope](http://www.kaleidoscopeapp.com/): Diff tool
 * [iTerm 2](https://www.iterm2.com/): Terminal on steroids
+* [BlueHarvest](http://zeroonetwenty.com/blueharvest): Keep disks clean of Mac OS metadata
 
 **Windows**
 * [Visual Studio Community](https://www.visualstudio.com/) - Code editor and .NET builder
