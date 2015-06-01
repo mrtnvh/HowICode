@@ -24,6 +24,7 @@ I use the following tools and apps:
 
 ## GUI:
 **Mac OS**
+* [Alfred](http://www.alfredapp.com/): Productivity app
 * [Sublime Text 3](http://www.sublimetext.com/3): Code editor
   * Package Control [with these packages](https://github.com/vanhoofmaarten/HowICode/blob/master/sublime-package-control-settings.json)
 * [Sourcetree](https://www.sourcetreeapp.com/): Git
