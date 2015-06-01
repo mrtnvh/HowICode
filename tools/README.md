@@ -47,10 +47,10 @@ I use the following tools and apps:
 * [Basecamp](http://basecamp.com/): Project management
 * [Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/) : Web performance test
 * [Google Analytics](http://www.google.be/intl/nl/analytics/) : Get analytics from your website / app.
-* []
+* [Spotiy](https://www.spotify.com)
 
 
 
 ## Favorite frameworks:
 * Suitstrap : Bootstrap fork complying to own naming conventions
-*
+* Bootstrap
