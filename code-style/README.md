@@ -1,5 +1,5 @@
 # Code style
-1. [General principles](general-principles)
+1. [General principles](general-rules)
 2. [Design principles](design-principles)
 	* [Base styles](design-principles/base-styles.md)
 	* [Components](design-principles/components.md)
