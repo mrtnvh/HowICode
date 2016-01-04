@@ -41,3 +41,15 @@
 	[Markup Validation Service](https://validator.w3.org/)
 - [ ] CSS lint
 - [ ] JShint
+
+## Server settings
+### web.config
+
+- [ ] Add [HTML5 Boilerplate server settings](https://github.com/h5bp/server-configs-iis/blob/master/server%20config/Web.config), if not yet added.
+- [ ] Set `debug=false` on `<compilation/>`
+- [ ] Add under `<system.webServer>`
+``` xml
+<handlers>
+	<remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+</handlers>
+```
